@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "synth": "cdk synth > dist/cloudformation.yaml"
+    "synth": "cdk synth > cloudformation.yaml"
   },
   "repository": {
     "type": "git",

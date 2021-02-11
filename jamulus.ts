@@ -1,5 +1,5 @@
 import { App, Stack, Construct } from '@aws-cdk/core';
-import { Cluster, TaskDefinition, Compatibility, RepositoryImage, FargateService } from '@aws-cdk/aws-ecs';
+import { Cluster, TaskDefinition, Compatibility, RepositoryImage, FargateService, LogDrivers } from '@aws-cdk/aws-ecs';
 import { SecurityGroup, Peer, Port } from '@aws-cdk/aws-ec2';
 
 class Jamulus extends Stack {
@@ -23,7 +23,8 @@ class Jamulus extends Stack {
             image: new RepositoryImage('grundic/jamulus'),
             entryPoint: ['Jamulus','--server','--nogui'],
             cpu,
-            memoryLimitMiB: memory
+            memoryLimitMiB: memory,
+            logging: LogDrivers.awsLogs({ streamPrefix: 'Jamulus' })
         });
 
         const securityGroup = new SecurityGroup(this, 'Security Group', {
