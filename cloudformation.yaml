@@ -1,9 +1,5 @@
 Resources:
-  ClusterEB0386A7:
-    Type: AWS::ECS::Cluster
-    Metadata:
-      aws:cdk:path: Jamulus/Cluster/Resource
-  ClusterVpcFAA3CEDF:
+  Vpc8378EB38:
     Type: AWS::EC2::VPC
     Properties:
       CidrBlock: 10.0.0.0/16
@@ -12,15 +8,15 @@ Resources:
       InstanceTenancy: default
       Tags:
         - Key: Name
-          Value: Jamulus/Cluster/Vpc
+          Value: Jamulus/Vpc
     Metadata:
-      aws:cdk:path: Jamulus/Cluster/Vpc/Resource
-  ClusterVpcPublicSubnet1SubnetA9F7E0A5:
+      aws:cdk:path: Jamulus/Vpc/Resource
+  VpcJamulusSubnet1Subnet39D54A29:
     Type: AWS::EC2::Subnet
     Properties:
-      CidrBlock: 10.0.0.0/18
+      CidrBlock: 10.0.0.0/16
       VpcId:
-        Ref: ClusterVpcFAA3CEDF
+        Ref: Vpc8378EB38
       AvailabilityZone:
         Fn::Select:
           - 0
@@ -28,256 +24,65 @@ Resources:
       MapPublicIpOnLaunch: true
       Tags:
         - Key: aws-cdk:subnet-name
-          Value: Public
+          Value: Jamulus
         - Key: aws-cdk:subnet-type
           Value: Public
         - Key: Name
-          Value: Jamulus/Cluster/Vpc/PublicSubnet1
+          Value: Jamulus/Vpc/JamulusSubnet1
     Metadata:
-      aws:cdk:path: Jamulus/Cluster/Vpc/PublicSubnet1/Subnet
-  ClusterVpcPublicSubnet1RouteTable5594A636:
+      aws:cdk:path: Jamulus/Vpc/JamulusSubnet1/Subnet
+  VpcJamulusSubnet1RouteTableF76CBFE8:
     Type: AWS::EC2::RouteTable
     Properties:
       VpcId:
-        Ref: ClusterVpcFAA3CEDF
+        Ref: Vpc8378EB38
       Tags:
         - Key: Name
-          Value: Jamulus/Cluster/Vpc/PublicSubnet1
+          Value: Jamulus/Vpc/JamulusSubnet1
     Metadata:
-      aws:cdk:path: Jamulus/Cluster/Vpc/PublicSubnet1/RouteTable
-  ClusterVpcPublicSubnet1RouteTableAssociation0FBEF1F4:
+      aws:cdk:path: Jamulus/Vpc/JamulusSubnet1/RouteTable
+  VpcJamulusSubnet1RouteTableAssociation6E04580B:
     Type: AWS::EC2::SubnetRouteTableAssociation
     Properties:
       RouteTableId:
-        Ref: ClusterVpcPublicSubnet1RouteTable5594A636
+        Ref: VpcJamulusSubnet1RouteTableF76CBFE8
       SubnetId:
-        Ref: ClusterVpcPublicSubnet1SubnetA9F7E0A5
+        Ref: VpcJamulusSubnet1Subnet39D54A29
     Metadata:
-      aws:cdk:path: Jamulus/Cluster/Vpc/PublicSubnet1/RouteTableAssociation
-  ClusterVpcPublicSubnet1DefaultRoute62DA4B4B:
+      aws:cdk:path: Jamulus/Vpc/JamulusSubnet1/RouteTableAssociation
+  VpcJamulusSubnet1DefaultRoute5DA6AA03:
     Type: AWS::EC2::Route
     Properties:
       RouteTableId:
-        Ref: ClusterVpcPublicSubnet1RouteTable5594A636
+        Ref: VpcJamulusSubnet1RouteTableF76CBFE8
       DestinationCidrBlock: 0.0.0.0/0
       GatewayId:
-        Ref: ClusterVpcIGW1E358A6E
+        Ref: VpcIGWD7BA715C
     DependsOn:
-      - ClusterVpcVPCGW47AC17E9
+      - VpcVPCGWBF912B6E
     Metadata:
-      aws:cdk:path: Jamulus/Cluster/Vpc/PublicSubnet1/DefaultRoute
-  ClusterVpcPublicSubnet1EIP433C56EE:
-    Type: AWS::EC2::EIP
-    Properties:
-      Domain: vpc
-      Tags:
-        - Key: Name
-          Value: Jamulus/Cluster/Vpc/PublicSubnet1
-    Metadata:
-      aws:cdk:path: Jamulus/Cluster/Vpc/PublicSubnet1/EIP
-  ClusterVpcPublicSubnet1NATGateway0693C346:
-    Type: AWS::EC2::NatGateway
-    Properties:
-      AllocationId:
-        Fn::GetAtt:
-          - ClusterVpcPublicSubnet1EIP433C56EE
-          - AllocationId
-      SubnetId:
-        Ref: ClusterVpcPublicSubnet1SubnetA9F7E0A5
-      Tags:
-        - Key: Name
-          Value: Jamulus/Cluster/Vpc/PublicSubnet1
-    Metadata:
-      aws:cdk:path: Jamulus/Cluster/Vpc/PublicSubnet1/NATGateway
-  ClusterVpcPublicSubnet2Subnet059113C4:
-    Type: AWS::EC2::Subnet
-    Properties:
-      CidrBlock: 10.0.64.0/18
-      VpcId:
-        Ref: ClusterVpcFAA3CEDF
-      AvailabilityZone:
-        Fn::Select:
-          - 1
-          - Fn::GetAZs: ""
-      MapPublicIpOnLaunch: true
-      Tags:
-        - Key: aws-cdk:subnet-name
-          Value: Public
-        - Key: aws-cdk:subnet-type
-          Value: Public
-        - Key: Name
-          Value: Jamulus/Cluster/Vpc/PublicSubnet2
-    Metadata:
-      aws:cdk:path: Jamulus/Cluster/Vpc/PublicSubnet2/Subnet
-  ClusterVpcPublicSubnet2RouteTable7B43F18C:
-    Type: AWS::EC2::RouteTable
-    Properties:
-      VpcId:
-        Ref: ClusterVpcFAA3CEDF
-      Tags:
-        - Key: Name
-          Value: Jamulus/Cluster/Vpc/PublicSubnet2
-    Metadata:
-      aws:cdk:path: Jamulus/Cluster/Vpc/PublicSubnet2/RouteTable
-  ClusterVpcPublicSubnet2RouteTableAssociation8446B27D:
-    Type: AWS::EC2::SubnetRouteTableAssociation
-    Properties:
-      RouteTableId:
-        Ref: ClusterVpcPublicSubnet2RouteTable7B43F18C
-      SubnetId:
-        Ref: ClusterVpcPublicSubnet2Subnet059113C4
-    Metadata:
-      aws:cdk:path: Jamulus/Cluster/Vpc/PublicSubnet2/RouteTableAssociation
-  ClusterVpcPublicSubnet2DefaultRoute97446C8A:
-    Type: AWS::EC2::Route
-    Properties:
-      RouteTableId:
-        Ref: ClusterVpcPublicSubnet2RouteTable7B43F18C
-      DestinationCidrBlock: 0.0.0.0/0
-      GatewayId:
-        Ref: ClusterVpcIGW1E358A6E
-    DependsOn:
-      - ClusterVpcVPCGW47AC17E9
-    Metadata:
-      aws:cdk:path: Jamulus/Cluster/Vpc/PublicSubnet2/DefaultRoute
-  ClusterVpcPublicSubnet2EIP203DF3E5:
-    Type: AWS::EC2::EIP
-    Properties:
-      Domain: vpc
-      Tags:
-        - Key: Name
-          Value: Jamulus/Cluster/Vpc/PublicSubnet2
-    Metadata:
-      aws:cdk:path: Jamulus/Cluster/Vpc/PublicSubnet2/EIP
-  ClusterVpcPublicSubnet2NATGateway00B24686:
-    Type: AWS::EC2::NatGateway
-    Properties:
-      AllocationId:
-        Fn::GetAtt:
-          - ClusterVpcPublicSubnet2EIP203DF3E5
-          - AllocationId
-      SubnetId:
-        Ref: ClusterVpcPublicSubnet2Subnet059113C4
-      Tags:
-        - Key: Name
-          Value: Jamulus/Cluster/Vpc/PublicSubnet2
-    Metadata:
-      aws:cdk:path: Jamulus/Cluster/Vpc/PublicSubnet2/NATGateway
-  ClusterVpcPrivateSubnet1SubnetA4EB481A:
-    Type: AWS::EC2::Subnet
-    Properties:
-      CidrBlock: 10.0.128.0/18
-      VpcId:
-        Ref: ClusterVpcFAA3CEDF
-      AvailabilityZone:
-        Fn::Select:
-          - 0
-          - Fn::GetAZs: ""
-      MapPublicIpOnLaunch: false
-      Tags:
-        - Key: aws-cdk:subnet-name
-          Value: Private
-        - Key: aws-cdk:subnet-type
-          Value: Private
-        - Key: Name
-          Value: Jamulus/Cluster/Vpc/PrivateSubnet1
-    Metadata:
-      aws:cdk:path: Jamulus/Cluster/Vpc/PrivateSubnet1/Subnet
-  ClusterVpcPrivateSubnet1RouteTable5AAEDA3F:
-    Type: AWS::EC2::RouteTable
-    Properties:
-      VpcId:
-        Ref: ClusterVpcFAA3CEDF
-      Tags:
-        - Key: Name
-          Value: Jamulus/Cluster/Vpc/PrivateSubnet1
-    Metadata:
-      aws:cdk:path: Jamulus/Cluster/Vpc/PrivateSubnet1/RouteTable
-  ClusterVpcPrivateSubnet1RouteTableAssociation9B8A88D9:
-    Type: AWS::EC2::SubnetRouteTableAssociation
-    Properties:
-      RouteTableId:
-        Ref: ClusterVpcPrivateSubnet1RouteTable5AAEDA3F
-      SubnetId:
-        Ref: ClusterVpcPrivateSubnet1SubnetA4EB481A
-    Metadata:
-      aws:cdk:path: Jamulus/Cluster/Vpc/PrivateSubnet1/RouteTableAssociation
-  ClusterVpcPrivateSubnet1DefaultRoute3B4D40DD:
-    Type: AWS::EC2::Route
-    Properties:
-      RouteTableId:
-        Ref: ClusterVpcPrivateSubnet1RouteTable5AAEDA3F
-      DestinationCidrBlock: 0.0.0.0/0
-      NatGatewayId:
-        Ref: ClusterVpcPublicSubnet1NATGateway0693C346
-    Metadata:
-      aws:cdk:path: Jamulus/Cluster/Vpc/PrivateSubnet1/DefaultRoute
-  ClusterVpcPrivateSubnet2SubnetBD1ECB6E:
-    Type: AWS::EC2::Subnet
-    Properties:
-      CidrBlock: 10.0.192.0/18
-      VpcId:
-        Ref: ClusterVpcFAA3CEDF
-      AvailabilityZone:
-        Fn::Select:
-          - 1
-          - Fn::GetAZs: ""
-      MapPublicIpOnLaunch: false
-      Tags:
-        - Key: aws-cdk:subnet-name
-          Value: Private
-        - Key: aws-cdk:subnet-type
-          Value: Private
-        - Key: Name
-          Value: Jamulus/Cluster/Vpc/PrivateSubnet2
-    Metadata:
-      aws:cdk:path: Jamulus/Cluster/Vpc/PrivateSubnet2/Subnet
-  ClusterVpcPrivateSubnet2RouteTable73064A66:
-    Type: AWS::EC2::RouteTable
-    Properties:
-      VpcId:
-        Ref: ClusterVpcFAA3CEDF
-      Tags:
-        - Key: Name
-          Value: Jamulus/Cluster/Vpc/PrivateSubnet2
-    Metadata:
-      aws:cdk:path: Jamulus/Cluster/Vpc/PrivateSubnet2/RouteTable
-  ClusterVpcPrivateSubnet2RouteTableAssociationFB21349E:
-    Type: AWS::EC2::SubnetRouteTableAssociation
-    Properties:
-      RouteTableId:
-        Ref: ClusterVpcPrivateSubnet2RouteTable73064A66
-      SubnetId:
-        Ref: ClusterVpcPrivateSubnet2SubnetBD1ECB6E
-    Metadata:
-      aws:cdk:path: Jamulus/Cluster/Vpc/PrivateSubnet2/RouteTableAssociation
-  ClusterVpcPrivateSubnet2DefaultRoute011666AF:
-    Type: AWS::EC2::Route
-    Properties:
-      RouteTableId:
-        Ref: ClusterVpcPrivateSubnet2RouteTable73064A66
-      DestinationCidrBlock: 0.0.0.0/0
-      NatGatewayId:
-        Ref: ClusterVpcPublicSubnet2NATGateway00B24686
-    Metadata:
-      aws:cdk:path: Jamulus/Cluster/Vpc/PrivateSubnet2/DefaultRoute
-  ClusterVpcIGW1E358A6E:
+      aws:cdk:path: Jamulus/Vpc/JamulusSubnet1/DefaultRoute
+  VpcIGWD7BA715C:
     Type: AWS::EC2::InternetGateway
     Properties:
       Tags:
         - Key: Name
-          Value: Jamulus/Cluster/Vpc
+          Value: Jamulus/Vpc
     Metadata:
-      aws:cdk:path: Jamulus/Cluster/Vpc/IGW
-  ClusterVpcVPCGW47AC17E9:
+      aws:cdk:path: Jamulus/Vpc/IGW
+  VpcVPCGWBF912B6E:
     Type: AWS::EC2::VPCGatewayAttachment
     Properties:
       VpcId:
-        Ref: ClusterVpcFAA3CEDF
+        Ref: Vpc8378EB38
       InternetGatewayId:
-        Ref: ClusterVpcIGW1E358A6E
+        Ref: VpcIGWD7BA715C
     Metadata:
-      aws:cdk:path: Jamulus/Cluster/Vpc/VPCGW
+      aws:cdk:path: Jamulus/Vpc/VPCGW
+  ClusterEB0386A7:
+    Type: AWS::ECS::Cluster
+    Metadata:
+      aws:cdk:path: Jamulus/Cluster/Resource
   TaskDefinitionTaskRoleFD40A61D:
     Type: AWS::IAM::Role
     Properties:
@@ -380,7 +185,7 @@ Resources:
           IpProtocol: udp
           ToPort: 22124
       VpcId:
-        Ref: ClusterVpcFAA3CEDF
+        Ref: Vpc8378EB38
     Metadata:
       aws:cdk:path: Jamulus/Security Group/Resource
   ServiceD69D759B:
@@ -402,8 +207,7 @@ Resources:
                 - SecurityGroup580CF996
                 - GroupId
           Subnets:
-            - Ref: ClusterVpcPublicSubnet1SubnetA9F7E0A5
-            - Ref: ClusterVpcPublicSubnet2Subnet059113C4
+            - Ref: VpcJamulusSubnet1Subnet39D54A29
       TaskDefinition:
         Ref: TaskDefinitionB36D86D9
     Metadata:

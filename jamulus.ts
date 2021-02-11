@@ -1,12 +1,26 @@
 import { App, Stack, Construct } from '@aws-cdk/core';
 import { Cluster, TaskDefinition, Compatibility, RepositoryImage, FargateService, LogDrivers } from '@aws-cdk/aws-ecs';
-import { SecurityGroup, Peer, Port } from '@aws-cdk/aws-ec2';
+import { SecurityGroup, Peer, Port, Vpc, SubnetType } from '@aws-cdk/aws-ec2';
 
 class Jamulus extends Stack {
     constructor(scope: Construct, id: string) {
         super(scope, id);
 
-        const cluster = new Cluster(this, 'Cluster');
+        // We don't need anything other than a simple VPC with a single subnet
+        // This saves time at creation and also money, as it won't create NAT gateways between public/private
+        const vpc = new Vpc(this, 'Vpc', {
+            cidr: '10.0.0.0/16',
+            maxAzs: 1,
+            natGateways: 0,
+            subnetConfiguration: [
+                {
+                    name: 'Jamulus',
+                    subnetType: SubnetType.PUBLIC
+                }
+            ]
+        });
+
+        const cluster = new Cluster(this, 'Cluster', { vpc });
 
         // Only applies when running in Fargate
         // https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-cpu-memory-error.html
