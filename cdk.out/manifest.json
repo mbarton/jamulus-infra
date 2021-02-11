@@ -1,0 +1,911 @@
+{
+  "version": "9.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "Jamulus": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "Jamulus.template.json"
+      },
+      "metadata": {
+        "/Jamulus/Cluster/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterEB0386A7",
+            "trace": [
+              "new Cluster (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ecs/lib/cluster.ts:137:21)",
+              "new Jamulus (/Users/michael_barton/code/jamulus-infra/jamulus.ts:9:25)",
+              "Object.<anonymous> (/Users/michael_barton/code/jamulus-infra/jamulus.ts:46:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/Jamulus/Cluster/Vpc/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterVpcFAA3CEDF",
+            "trace": [
+              "new Vpc (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1199:21)",
+              "new Cluster (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ecs/lib/cluster.ts:149:29)",
+              "new Jamulus (/Users/michael_barton/code/jamulus-infra/jamulus.ts:9:25)",
+              "Object.<anonymous> (/Users/michael_barton/code/jamulus-infra/jamulus.ts:46:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/Jamulus/Cluster/Vpc/PublicSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterVpcPublicSubnet1SubnetA9F7E0A5",
+            "trace": [
+              "new Subnet (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1533:20)",
+              "new PublicSubnet (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1748:5)",
+              "/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1379:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1361:28)",
+              "Vpc.createSubnets (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1356:12)",
+              "new Vpc (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1228:10)",
+              "new Cluster (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ecs/lib/cluster.ts:149:29)",
+              "new Jamulus (/Users/michael_barton/code/jamulus-infra/jamulus.ts:9:25)",
+              "Object.<anonymous> (/Users/michael_barton/code/jamulus-infra/jamulus.ts:46:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/Jamulus/Cluster/Vpc/PublicSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterVpcPublicSubnet1RouteTable5594A636",
+            "trace": [
+              "new Subnet (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1551:19)",
+              "new PublicSubnet (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1748:5)",
+              "/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1379:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1361:28)",
+              "Vpc.createSubnets (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1356:12)",
+              "new Vpc (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1228:10)",
+              "new Cluster (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ecs/lib/cluster.ts:149:29)",
+              "new Jamulus (/Users/michael_barton/code/jamulus-infra/jamulus.ts:9:25)",
+              "Object.<anonymous> (/Users/michael_barton/code/jamulus-infra/jamulus.ts:46:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/Jamulus/Cluster/Vpc/PublicSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterVpcPublicSubnet1RouteTableAssociation0FBEF1F4",
+            "trace": [
+              "new Subnet (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1557:5)",
+              "new PublicSubnet (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1748:5)",
+              "/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1379:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1361:28)",
+              "Vpc.createSubnets (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1356:12)",
+              "new Vpc (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1228:10)",
+              "new Cluster (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ecs/lib/cluster.ts:149:29)",
+              "new Jamulus (/Users/michael_barton/code/jamulus-infra/jamulus.ts:9:25)",
+              "Object.<anonymous> (/Users/michael_barton/code/jamulus-infra/jamulus.ts:46:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/Jamulus/Cluster/Vpc/PublicSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterVpcPublicSubnet1DefaultRoute62DA4B4B",
+            "trace": [
+              "PublicSubnet.addDefaultInternetRoute (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1573:19)",
+              "/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1247:22",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1246:46)",
+              "new Cluster (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ecs/lib/cluster.ts:149:29)",
+              "new Jamulus (/Users/michael_barton/code/jamulus-infra/jamulus.ts:9:25)",
+              "Object.<anonymous> (/Users/michael_barton/code/jamulus-infra/jamulus.ts:46:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/Jamulus/Cluster/Vpc/PublicSubnet1/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterVpcPublicSubnet1EIP433C56EE",
+            "trace": [
+              "PublicSubnet.addNatGateway (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1760:21)",
+              "NatGatewayProvider.configureNat (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/nat.ts:173:27)",
+              "Vpc.createNatGateways (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1331:14)",
+              "new Vpc (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1253:14)",
+              "new Cluster (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ecs/lib/cluster.ts:149:29)",
+              "new Jamulus (/Users/michael_barton/code/jamulus-infra/jamulus.ts:9:25)",
+              "Object.<anonymous> (/Users/michael_barton/code/jamulus-infra/jamulus.ts:46:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/Jamulus/Cluster/Vpc/PublicSubnet1/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterVpcPublicSubnet1NATGateway0693C346",
+            "trace": [
+              "PublicSubnet.addNatGateway (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1758:17)",
+              "NatGatewayProvider.configureNat (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/nat.ts:173:27)",
+              "Vpc.createNatGateways (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1331:14)",
+              "new Vpc (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1253:14)",
+              "new Cluster (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ecs/lib/cluster.ts:149:29)",
+              "new Jamulus (/Users/michael_barton/code/jamulus-infra/jamulus.ts:9:25)",
+              "Object.<anonymous> (/Users/michael_barton/code/jamulus-infra/jamulus.ts:46:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/Jamulus/Cluster/Vpc/PublicSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterVpcPublicSubnet2Subnet059113C4",
+            "trace": [
+              "new Subnet (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1533:20)",
+              "new PublicSubnet (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1748:5)",
+              "/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1379:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1361:28)",
+              "Vpc.createSubnets (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1356:12)",
+              "new Vpc (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1228:10)",
+              "new Cluster (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ecs/lib/cluster.ts:149:29)",
+              "new Jamulus (/Users/michael_barton/code/jamulus-infra/jamulus.ts:9:25)",
+              "Object.<anonymous> (/Users/michael_barton/code/jamulus-infra/jamulus.ts:46:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/Jamulus/Cluster/Vpc/PublicSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterVpcPublicSubnet2RouteTable7B43F18C",
+            "trace": [
+              "new Subnet (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1551:19)",
+              "new PublicSubnet (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1748:5)",
+              "/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1379:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1361:28)",
+              "Vpc.createSubnets (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1356:12)",
+              "new Vpc (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1228:10)",
+              "new Cluster (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ecs/lib/cluster.ts:149:29)",
+              "new Jamulus (/Users/michael_barton/code/jamulus-infra/jamulus.ts:9:25)",
+              "Object.<anonymous> (/Users/michael_barton/code/jamulus-infra/jamulus.ts:46:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/Jamulus/Cluster/Vpc/PublicSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterVpcPublicSubnet2RouteTableAssociation8446B27D",
+            "trace": [
+              "new Subnet (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1557:5)",
+              "new PublicSubnet (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1748:5)",
+              "/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1379:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1361:28)",
+              "Vpc.createSubnets (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1356:12)",
+              "new Vpc (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1228:10)",
+              "new Cluster (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ecs/lib/cluster.ts:149:29)",
+              "new Jamulus (/Users/michael_barton/code/jamulus-infra/jamulus.ts:9:25)",
+              "Object.<anonymous> (/Users/michael_barton/code/jamulus-infra/jamulus.ts:46:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/Jamulus/Cluster/Vpc/PublicSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterVpcPublicSubnet2DefaultRoute97446C8A",
+            "trace": [
+              "PublicSubnet.addDefaultInternetRoute (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1573:19)",
+              "/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1247:22",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1246:46)",
+              "new Cluster (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ecs/lib/cluster.ts:149:29)",
+              "new Jamulus (/Users/michael_barton/code/jamulus-infra/jamulus.ts:9:25)",
+              "Object.<anonymous> (/Users/michael_barton/code/jamulus-infra/jamulus.ts:46:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/Jamulus/Cluster/Vpc/PublicSubnet2/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterVpcPublicSubnet2EIP203DF3E5",
+            "trace": [
+              "PublicSubnet.addNatGateway (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1760:21)",
+              "NatGatewayProvider.configureNat (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/nat.ts:173:27)",
+              "Vpc.createNatGateways (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1331:14)",
+              "new Vpc (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1253:14)",
+              "new Cluster (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ecs/lib/cluster.ts:149:29)",
+              "new Jamulus (/Users/michael_barton/code/jamulus-infra/jamulus.ts:9:25)",
+              "Object.<anonymous> (/Users/michael_barton/code/jamulus-infra/jamulus.ts:46:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/Jamulus/Cluster/Vpc/PublicSubnet2/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterVpcPublicSubnet2NATGateway00B24686",
+            "trace": [
+              "PublicSubnet.addNatGateway (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1758:17)",
+              "NatGatewayProvider.configureNat (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/nat.ts:173:27)",
+              "Vpc.createNatGateways (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1331:14)",
+              "new Vpc (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1253:14)",
+              "new Cluster (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ecs/lib/cluster.ts:149:29)",
+              "new Jamulus (/Users/michael_barton/code/jamulus-infra/jamulus.ts:9:25)",
+              "Object.<anonymous> (/Users/michael_barton/code/jamulus-infra/jamulus.ts:46:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/Jamulus/Cluster/Vpc/PrivateSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterVpcPrivateSubnet1SubnetA4EB481A",
+            "trace": [
+              "new Subnet (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1533:20)",
+              "new PrivateSubnet (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1786:5)",
+              "/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1384:33",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1361:28)",
+              "Vpc.createSubnets (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1356:12)",
+              "new Vpc (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1228:10)",
+              "new Cluster (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ecs/lib/cluster.ts:149:29)",
+              "new Jamulus (/Users/michael_barton/code/jamulus-infra/jamulus.ts:9:25)",
+              "Object.<anonymous> (/Users/michael_barton/code/jamulus-infra/jamulus.ts:46:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/Jamulus/Cluster/Vpc/PrivateSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterVpcPrivateSubnet1RouteTable5AAEDA3F",
+            "trace": [
+              "new Subnet (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1551:19)",
+              "new PrivateSubnet (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1786:5)",
+              "/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1384:33",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1361:28)",
+              "Vpc.createSubnets (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1356:12)",
+              "new Vpc (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1228:10)",
+              "new Cluster (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ecs/lib/cluster.ts:149:29)",
+              "new Jamulus (/Users/michael_barton/code/jamulus-infra/jamulus.ts:9:25)",
+              "Object.<anonymous> (/Users/michael_barton/code/jamulus-infra/jamulus.ts:46:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/Jamulus/Cluster/Vpc/PrivateSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterVpcPrivateSubnet1RouteTableAssociation9B8A88D9",
+            "trace": [
+              "new Subnet (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1557:5)",
+              "new PrivateSubnet (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1786:5)",
+              "/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1384:33",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1361:28)",
+              "Vpc.createSubnets (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1356:12)",
+              "new Vpc (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1228:10)",
+              "new Cluster (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ecs/lib/cluster.ts:149:29)",
+              "new Jamulus (/Users/michael_barton/code/jamulus-infra/jamulus.ts:9:25)",
+              "Object.<anonymous> (/Users/michael_barton/code/jamulus-infra/jamulus.ts:46:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/Jamulus/Cluster/Vpc/PrivateSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterVpcPrivateSubnet1DefaultRoute3B4D40DD",
+            "trace": [
+              "PrivateSubnet.addRoute (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1619:19)",
+              "NatGatewayProvider.configureSubnet (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/nat.ts:186:12)",
+              "NatGatewayProvider.configureNat (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/nat.ts:179:12)",
+              "Vpc.createNatGateways (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1331:14)",
+              "new Vpc (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1253:14)",
+              "new Cluster (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ecs/lib/cluster.ts:149:29)",
+              "new Jamulus (/Users/michael_barton/code/jamulus-infra/jamulus.ts:9:25)",
+              "Object.<anonymous> (/Users/michael_barton/code/jamulus-infra/jamulus.ts:46:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/Jamulus/Cluster/Vpc/PrivateSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterVpcPrivateSubnet2SubnetBD1ECB6E",
+            "trace": [
+              "new Subnet (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1533:20)",
+              "new PrivateSubnet (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1786:5)",
+              "/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1384:33",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1361:28)",
+              "Vpc.createSubnets (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1356:12)",
+              "new Vpc (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1228:10)",
+              "new Cluster (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ecs/lib/cluster.ts:149:29)",
+              "new Jamulus (/Users/michael_barton/code/jamulus-infra/jamulus.ts:9:25)",
+              "Object.<anonymous> (/Users/michael_barton/code/jamulus-infra/jamulus.ts:46:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/Jamulus/Cluster/Vpc/PrivateSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterVpcPrivateSubnet2RouteTable73064A66",
+            "trace": [
+              "new Subnet (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1551:19)",
+              "new PrivateSubnet (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1786:5)",
+              "/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1384:33",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1361:28)",
+              "Vpc.createSubnets (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1356:12)",
+              "new Vpc (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1228:10)",
+              "new Cluster (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ecs/lib/cluster.ts:149:29)",
+              "new Jamulus (/Users/michael_barton/code/jamulus-infra/jamulus.ts:9:25)",
+              "Object.<anonymous> (/Users/michael_barton/code/jamulus-infra/jamulus.ts:46:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/Jamulus/Cluster/Vpc/PrivateSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterVpcPrivateSubnet2RouteTableAssociationFB21349E",
+            "trace": [
+              "new Subnet (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1557:5)",
+              "new PrivateSubnet (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1786:5)",
+              "/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1384:33",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1361:28)",
+              "Vpc.createSubnets (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1356:12)",
+              "new Vpc (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1228:10)",
+              "new Cluster (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ecs/lib/cluster.ts:149:29)",
+              "new Jamulus (/Users/michael_barton/code/jamulus-infra/jamulus.ts:9:25)",
+              "Object.<anonymous> (/Users/michael_barton/code/jamulus-infra/jamulus.ts:46:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/Jamulus/Cluster/Vpc/PrivateSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterVpcPrivateSubnet2DefaultRoute011666AF",
+            "trace": [
+              "PrivateSubnet.addRoute (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1619:19)",
+              "NatGatewayProvider.configureSubnet (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/nat.ts:186:12)",
+              "NatGatewayProvider.configureNat (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/nat.ts:179:12)",
+              "Vpc.createNatGateways (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1331:14)",
+              "new Vpc (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1253:14)",
+              "new Cluster (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ecs/lib/cluster.ts:149:29)",
+              "new Jamulus (/Users/michael_barton/code/jamulus-infra/jamulus.ts:9:25)",
+              "Object.<anonymous> (/Users/michael_barton/code/jamulus-infra/jamulus.ts:46:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/Jamulus/Cluster/Vpc/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterVpcIGW1E358A6E",
+            "trace": [
+              "new Vpc (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1235:19)",
+              "new Cluster (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ecs/lib/cluster.ts:149:29)",
+              "new Jamulus (/Users/michael_barton/code/jamulus-infra/jamulus.ts:9:25)",
+              "Object.<anonymous> (/Users/michael_barton/code/jamulus-infra/jamulus.ts:46:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/Jamulus/Cluster/Vpc/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterVpcVPCGW47AC17E9",
+            "trace": [
+              "new Vpc (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1241:19)",
+              "new Cluster (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ecs/lib/cluster.ts:149:29)",
+              "new Jamulus (/Users/michael_barton/code/jamulus-infra/jamulus.ts:9:25)",
+              "Object.<anonymous> (/Users/michael_barton/code/jamulus-infra/jamulus.ts:46:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/Jamulus/TaskDefinition/TaskRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TaskDefinitionTaskRoleFD40A61D",
+            "trace": [
+              "new Role (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-iam/lib/role.ts:327:18)",
+              "new TaskDefinition (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ecs/lib/base/task-definition.ts:304:39)",
+              "new Jamulus (/Users/michael_barton/code/jamulus-infra/jamulus.ts:16:32)",
+              "Object.<anonymous> (/Users/michael_barton/code/jamulus-infra/jamulus.ts:46:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/Jamulus/TaskDefinition/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TaskDefinitionB36D86D9",
+            "trace": [
+              "new TaskDefinition (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ecs/lib/base/task-definition.ts:308:21)",
+              "new Jamulus (/Users/michael_barton/code/jamulus-infra/jamulus.ts:16:32)",
+              "Object.<anonymous> (/Users/michael_barton/code/jamulus-infra/jamulus.ts:46:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/Jamulus/Security Group/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SecurityGroup580CF996",
+            "trace": [
+              "new SecurityGroup (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ec2/lib/security-group.ts:402:26)",
+              "new Jamulus (/Users/michael_barton/code/jamulus-infra/jamulus.ts:29:31)",
+              "Object.<anonymous> (/Users/michael_barton/code/jamulus-infra/jamulus.ts:46:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/Jamulus/Service/Service": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceD69D759B",
+            "trace": [
+              "new BaseService (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ecs/lib/base/base-service.ts:359:21)",
+              "new FargateService (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/aws-ecs/lib/fargate/fargate-service.ts:152:5)",
+              "new Jamulus (/Users/michael_barton/code/jamulus-infra/jamulus.ts:35:25)",
+              "Object.<anonymous> (/Users/michael_barton/code/jamulus-infra/jamulus.ts:46:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/michael_barton/code/jamulus-infra/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/Jamulus/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/core/lib/private/metadata-resource.ts:51:24)",
+              "/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/core/lib/private/synthesis.ts:140:5",
+              "visit (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/core/lib/private/synthesis.ts:200:5)",
+              "visit (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/core/lib/private/synthesis.ts:196:5)",
+              "injectMetadataResources (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/core/lib/private/synthesis.ts:131:3)",
+              "Object.synthesize (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/core/lib/private/synthesis.ts:18:3)",
+              "App.synth (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/core/lib/stage.ts:188:23)",
+              "process.<anonymous> (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/core/lib/app.ts:123:45)",
+              "Object.onceWrapper (events.js:422:26)",
+              "process.emit (events.js:315:20)",
+              "process.EventEmitter.emit (domain.js:467:12)",
+              "process.emit (/Users/michael_barton/code/jamulus-infra/node_modules/source-map-support/source-map-support.js:495:21)"
+            ]
+          }
+        ],
+        "/Jamulus/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable",
+            "trace": [
+              "new MetadataResource (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/core/lib/private/metadata-resource.ts:60:27)",
+              "/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/core/lib/private/synthesis.ts:140:5",
+              "visit (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/core/lib/private/synthesis.ts:200:5)",
+              "visit (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/core/lib/private/synthesis.ts:196:5)",
+              "injectMetadataResources (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/core/lib/private/synthesis.ts:131:3)",
+              "Object.synthesize (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/core/lib/private/synthesis.ts:18:3)",
+              "App.synth (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/core/lib/stage.ts:188:23)",
+              "process.<anonymous> (/Users/michael_barton/code/jamulus-infra/node_modules/@aws-cdk/core/lib/app.ts:123:45)",
+              "Object.onceWrapper (events.js:422:26)",
+              "process.emit (events.js:315:20)",
+              "process.EventEmitter.emit (domain.js:467:12)",
+              "process.emit (/Users/michael_barton/code/jamulus-infra/node_modules/source-map-support/source-map-support.js:495:21)"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
