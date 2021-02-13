@@ -1,0 +1,90 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Investigations Neo4j
+
+Parameters:
+  VpcId:
+    Description: VPC ID
+    Type: AWS::EC2::VPC::Id
+
+  SubnetAZ1Id:
+    Description: ID of the first subnet within the VPC 
+    Type: AWS::EC2::Subnet::Id
+  
+  SubnetAZ2Id:
+    Description: ID of the second subnet within the VPC 
+    Type: AWS::EC2::Subnet::Id
+
+  SubnetAZ3Id:
+    Description: ID of the third subnet within the VPC 
+    Type: AWS::EC2::Subnet::Id
+  
+  SSHKeyPair:
+    Description: SSH key pair used to access the server
+    Type: AWS::EC2::KeyPair::KeyName
+
+  InstanceType:
+    Type: String
+    Description: |
+      The instance type to use. See ec2instances.info/ for all the fun of the fair.
+    Default: m6g.large
+
+  AMI:
+    Description: AMI ID
+    Type: AWS::EC2::Image::Id
+    Description: |
+      This ID points to a pre-built VM image in AWS.
+      You can't use the same AMI across ARM instance types (which have g in the name, for example m6g.large) and amd64 ones.
+      Get FreeBSD amd64 AMI IDs via their mailing list: https://lists.freebsd.org/pipermail/freebsd-snapshots/
+      Get ARM AMI IDs via the very annoying AWS Marketplace UI: https://aws.amazon.com/marketplace/pp/B081NF7BY7
+    # FreeBSD 12.2 arm64 - built October 27, 2020
+    Default: ami-09bca48d39a4dd302
+
+
+Resources:
+  SecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Jamulus security group
+      VpcId: !Ref VpcId
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+          CidrIp: "0.0.0.0/0"
+        - IpProtocol: udp
+          FromPort: 22124
+          ToPort: 22124
+          CidrIp: "0.0.0.0/0"
+
+  LaunchConfig:
+    Type: AWS::AutoScaling::LaunchConfiguration
+    Properties:
+      ImageId: !Ref AMI
+      InstanceType: !Ref InstanceType
+      AssociatePublicIpAddress: true
+      KeyName: !Ref SSHKeyPair
+      SecurityGroups:
+        - !GetAtt SecurityGroup.GroupId
+      UserData:
+        Fn::Base64: |
+          #!/bin/sh -e
+          pkg install -y audio/jamulus
+          # Oh the wonderful world of incidental complexity in software
+          #  1) When we run the process, it doesn't show up unless you do 'ps -awx' to include those in the background
+          #  2) We need to refer to Jamulus using the full path, even though we don't when running manually in the shell?!
+          #
+          # The right way of running daemon processes on BSD is to write rc files to manage them
+          # for the moment though I can't be bothered. This does mean that Jamulus won't come back up automatically on a reboot.
+          nohup /usr/local/bin/Jamulus --server --nogui > /var/log/jamulus.log 2>&1 &
+
+  AutoScalingGroup:
+    Type: AWS::AutoScaling::AutoScalingGroup
+    Properties:
+      AvailabilityZones: !GetAZs ""
+      LaunchConfigurationName: !Ref LaunchConfig
+      MinSize: 1
+      MaxSize: 1
+      VPCZoneIdentifier:
+        - !Ref SubnetAZ1Id
+        - !Ref SubnetAZ2Id
+        - !Ref SubnetAZ3Id
